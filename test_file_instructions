@@ -13,3 +13,5 @@ sed -i 's/^[^@+]/CCGCGGTAA/g' xae
 #leave xaf to have no cut site
 
 cat x* > first.mod.fq
+
+./remove_spacers_from_RAD.py first.mod.fq second.fq -m1 pass.1.fq -m2 pass.2.fq -n1 fail.1.fq -n2 fail.2.fq
