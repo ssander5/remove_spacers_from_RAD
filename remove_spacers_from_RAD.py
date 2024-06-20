@@ -48,9 +48,9 @@ def process_fastq(input_file1, input_file2, output_file_matched1, output_file_ma
                 f_out_matched2.write(f'{qual_line2}\n')
             elif match1:
                 prefix_length = len(match1.group(1))
-                print(match1.group(1))
-                print(seq_line1)
-                print("PASS \n")
+                #print(match1.group(1))
+                #print(seq_line1)
+                #print("PASS \n")
                 trimmed_seq_line1 = seq_line1[:match1.start(1)] + seq_line1[match1.end(0)-3:]
                 trimmed_qual_line1 = qual_line1[prefix_length:]
 
@@ -66,8 +66,8 @@ def process_fastq(input_file1, input_file2, output_file_matched1, output_file_ma
                 f_out_matched2.write(f'{qual_line2}\n')
             else:
                 # Write non-matching sequences to output files
-                print(seq_line1)
-                print("FAIL \n")
+                #print(seq_line1)
+                #print("FAIL \n")
 
                 f_out_nonmatched1.write(f'{header1}\n')
                 f_out_nonmatched1.write(f'{seq_line1}\n')
