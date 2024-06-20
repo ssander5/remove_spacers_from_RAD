@@ -1,0 +1,15 @@
+Creating a test file:
+
+For any illumina paired read set:
+first.fq, second.fq
+
+bash:
+split -n 6 first.fq
+sed -i 's/^[^@+]/TAA/g' xaa
+sed -i 's/^[^@+]/TGTAA/g' xab
+sed -i 's/^[^@+]/ATCTAA/g' xac
+sed -i 's/^[^@+]/GTTCCTAA/g' xad
+sed -i 's/^[^@+]/CCGCGGTAA/g' xae
+#leave xaf to have no cut site
+
+cat x* > first.mod.fq
