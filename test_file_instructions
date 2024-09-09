@@ -3,9 +3,18 @@ Creating a test file:
 For any illumina paired read set:
 first.fq, second.fq
 
-bash:
+bash - new markers as of 9/9/24:
 split -n 6 first.fq
-sed -i 's/^[^@+]/TAA/g' xaa
+sed -i 's/^[^@+]/TAA/g' xaa  #no spacer, cut site only
+sed -i 's/^[^@+]/GGTAA/g' xab
+sed -i 's/^[^@+]/CTCAGTAA/g' xac
+sed -i 's/^[^@+]/AGACACTAA/g' xad
+sed -i 's/^[^@+]/TCGTCTGCTAA/g' xae
+#leave xaf to have no cut site
+
+bash - original markers:
+split -n 6 first.fq
+sed -i 's/^[^@+]/TAA/g' xaa  #no spacer, cut site only
 sed -i 's/^[^@+]/TGTAA/g' xab
 sed -i 's/^[^@+]/ATCTAA/g' xac
 sed -i 's/^[^@+]/GTTCCTAA/g' xad
