@@ -2,6 +2,12 @@
 Removing custom spacers for our new RAD library protocol Jun 2024
 
 Note, this is currently designed only for TAA (Msel) cut sites, with custom spacers listed below:
+^GG
+^CTCAG
+^AGACAC
+^TCGTCTGC
+
+Formerly:
 ^(TAA)
 ^TG(TAA)
 ^ATC(TAA)
