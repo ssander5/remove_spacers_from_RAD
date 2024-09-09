@@ -10,7 +10,8 @@ import argparse
 import re
 
 def process_fastq(input_file1, input_file2, output_file_matched1, output_file_matched2, output_file_nonmatched1, output_file_nonmatched2):
-    patterns = ["^TG", "^ATC", "^GTTCC", "^CCGCGG"]
+    #patterns = ["^TG", "^ATC", "^GTTCC", "^CCGCGG"]  #patterns updated per JL email Sept 9, 2024
+    patterns = ["^GG","^CTCAG","^AGACAC","^TCGTCTGC"]
     patterns_regex = "|".join(patterns)
     
     with open(input_file1, 'r') as f_in1, open(input_file2, 'r') as f_in2, \
